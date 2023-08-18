@@ -159,32 +159,31 @@
 }
 
 .endText {
-  position: relative;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   margin: auto;
+  padding: 15px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 8px;
+  border: 2px solid white;
+  background: linear-gradient(#100241, black);
 }
 
 .start {
   width: 250px;
+  margin: auto;
   height: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
 
 .startInput {
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -197,10 +196,17 @@
 
 .startButton {
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
+}
+.startButton:hover {
+  background: black;
+  color: white;
+  transition: 0.3s ease;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }

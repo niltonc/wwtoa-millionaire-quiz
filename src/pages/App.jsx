@@ -30,12 +30,10 @@ function App() {
             ) : (
               <>
                 <div className="top">
-                  <div className="timer">
-                    <Timer
-                      setTimeOut={setTimeOut}
-                      questionNumber={questionNumber}
-                    />
-                  </div>
+                  <Timer
+                    setTimeOut={setTimeOut}
+                    questionNumber={questionNumber}
+                  />
                 </div>
                 <div className="bottom">
                   <Trivia

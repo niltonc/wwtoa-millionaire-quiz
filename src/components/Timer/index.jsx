@@ -14,5 +14,6 @@ export default function Timer({ setTimeOut, questionNumber }) {
   useEffect(() => {
     setTimer(30);
   }, [questionNumber]);
-  return timer;
+
+  return <div className="timer">{timer}</div>;
 }
