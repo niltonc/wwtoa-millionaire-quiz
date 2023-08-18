@@ -1,11 +1,13 @@
 import "../styles/App.css";
 import { useEffect, useState } from "react";
+
 import Start from "../components/Start";
 import Timer from "../components/Timer";
 import Trivia from "../components/Trivia";
 
 import data from "../mock/questions";
 import moneyPyramid from "../mock/moneypyramid";
+import MoneyPyramid from "../components/moneyPyramid";
 
 function App() {
   const [username, setUsername] = useState(null);
@@ -16,7 +18,7 @@ function App() {
   useEffect(() => {
     questionNumber > 1 &&
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
-  }, [questionNumber, moneyPyramid]);
+  }, [questionNumber]);
 
   return (
     <div className="app">
@@ -46,22 +48,10 @@ function App() {
               </>
             )}
           </div>
-          <div className="pyramid">
-            <ul className="moneyList">
-              {moneyPyramid.map((m) => (
-                <li
-                  className={
-                    questionNumber === m.id
-                      ? "moneyListItem active"
-                      : "moneyListItem"
-                  }
-                >
-                  <span className="moneyListItemNumber">{m.id}</span>
-                  <span className="moneyListItemAmount">{m.amount}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <MoneyPyramid
+            options={moneyPyramid}
+            questionNumber={questionNumber}
+          />
         </>
       )}
     </div>

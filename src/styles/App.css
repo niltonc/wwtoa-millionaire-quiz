@@ -204,8 +204,7 @@
   font-weight: 500;
 }
 .startButton:hover {
-  background: black;
-  color: white;
+  background: white;
   transition: 0.3s ease;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
